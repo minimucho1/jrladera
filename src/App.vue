@@ -1,8 +1,14 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <div id="site-name">
+        <span>jrladera.dev</span>
+      </div>
+      <div id="links">
+        <router-link to="/">Home</router-link> |
+        <router-link to="/about">About</router-link> |
+        <router-link to="/blog">Blog</router-link>
+      </div>
     </div>
     <router-view/>
   </div>
@@ -20,12 +26,20 @@
 #nav {
   padding: 30px;
 
+  display: flex;
+  justify-content: space-around;
+
+  #site-name {
+    font-weight: bold;
+  }
+
   a {
     font-weight: bold;
-    color: #2c3e50;
+    text-decoration: none;
+    color: #000000;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: #2d7dbf;
     }
   }
 }
